@@ -3,16 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Price Prediction Website</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Blockchain Data Marketplace</title>
 </head>
 <body>
-    <h1>Price Prediction</h1>
-    <input type="file" id="fileInput" accept=".csv">
-    <button onclick="handleFileUpload()">Predict Price</button>
+    <div class="container">
+        <h1>Blockchain Data Marketplace</h1>
 
-    <!-- You can add a div to display the prediction result if needed -->
+        <div id="userPanel">
+        </div>
 
-    <!-- Include your JavaScript file -->
-    <script src="static/main.js"></script>
+        <div id="marketplace">
+            <!-- Marketplace content will be dynamically loaded here -->
+
+            <!-- Seller page content -->
+            <div id="sellerPage">
+                <h2>Sell Your Dataset</h2>
+
+                <!-- Seller input fields -->
+                <label for="datasetName">Dataset Name:</label>
+                <input type="text" id="datasetName" required>
+                
+                <label for="datasetDescription">Description:</label>
+                <textarea id="datasetDescription" required></textarea>
+                
+                <label for="datasetPrice">Price:</label>
+                <input type="number" id="datasetPrice" required>
+
+                <!-- File input for uploading -->
+                <input type="file" id="fileInput" accept=".csv">
+
+                <!-- Button to trigger file upload and prediction -->
+                <button onclick="sellDataset()">Sell Dataset</button>
+            </div>
+
+            <!-- Display area for prediction result -->
+            <div id="predictionResult"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

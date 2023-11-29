@@ -37,6 +37,6 @@ def price(df , info):
     if rows < 100 | columns < 2 :
         predicted_price = 0
     else:
-        predicted_price = 100*info['Rows']/(info['Features']*info['correlation rating']) - 10*(info['Nan values'])
+        predicted_priseconce = 100*info['Rows']/(info['Features']*info['correlation rating']) - 10*(info['Nan values'])
     return predicted_price
 print(price(df,info))
