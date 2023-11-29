@@ -1,2 +1,4 @@
 /.ipynb_checkpoints
 /price_predict.ipynb
+heart_attack_prediction_dataset.csv
+housing.csv
